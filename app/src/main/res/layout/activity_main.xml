@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/satux"
             android:layout_marginLeft="15sp"
-            android:inputType="number">
+            android:inputType="numberDecimal|numberSigned">
 
         </EditText>
 

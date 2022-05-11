@@ -32,55 +32,83 @@ public class MainActivity extends AppCompatActivity {
         hasil1 = (EditText) findViewById(R.id.hasilsatu);
         hasil2 = (EditText) findViewById(R.id.hasildua);
         hasil3 = (EditText) findViewById(R.id.hasiltiga);
-
-
+        jawabanx = (TextView) findViewById(R.id.jawabanx);
+        jawabany = (TextView) findViewById(R.id.jawabany);
+        jawabanz = (TextView) findViewById(R.id.jawabanz);
     }
 
-    private void hitung(View view) {
-        // ambil nilai dari editText
-        String a11 = satux.getText().toString();
-        String a12 = satuy.getText().toString();
-        String a13 = satuz.getText().toString();
-        String a21 = duax.getText().toString();
-        String a22 = duay.getText().toString();
-        String a23 = duaz.getText().toString();
-        String a31 = tigax.getText().toString();
-        String a32 = tigay.getText().toString();
-        String a33 = tigaz.getText().toString();
-        String k1 = hasil1.getText().toString();
-        String k2 = hasil2.getText().toString();
-        String k3 = hasil3.getText().toString();
+    public void hitung(View view) {
+        try {
+            // ambil nilai dari editText
+            String a11 = satux.getText().toString();
+            String a12 = satuy.getText().toString();
+            String a13 = satuz.getText().toString();
+            String a21 = duax.getText().toString();
+            String a22 = duay.getText().toString();
+            String a23 = duaz.getText().toString();
+            String a31 = tigax.getText().toString();
+            String a32 = tigay.getText().toString();
+            String a33 = tigaz.getText().toString();
+            String k1 = hasil1.getText().toString();
+            String k2 = hasil2.getText().toString();
+            String k3 = hasil3.getText().toString();
 
-        // ubah nilai String menjadi double
-        double finala11 = Double.parseDouble(a11);
-        double finala12 = Double.parseDouble(a12);
-        double finala13 = Double.parseDouble(a13);
-        double finala21 = Double.parseDouble(a21);
-        double finala22 = Double.parseDouble(a22);
-        double finala23 = Double.parseDouble(a23);
-        double finala31 = Double.parseDouble(a31);
-        double finala32 = Double.parseDouble(a32);
-        double finala33 = Double.parseDouble(a33);
+            // ubah nilai String menjadi double
+            double finala11 = Double.parseDouble(a11);
+            double finala12 = Double.parseDouble(a12);
+            double finala13 = Double.parseDouble(a13);
+            double finala21 = Double.parseDouble(a21);
+            double finala22 = Double.parseDouble(a22);
+            double finala23 = Double.parseDouble(a23);
+            double finala31 = Double.parseDouble(a31);
+            double finala32 = Double.parseDouble(a32);
+            double finala33 = Double.parseDouble(a33);
 
-        // ===============
-        // +==LANGKAH 1==+
-        // ===============
+            // ===============
+            // +==LANGKAH 1==+
+            // ===============
 
-        // masukkan nilai konstanta ke dalam variabel
-        konstanta1 = Double.parseDouble(k1);
-        konstanta2 = Double.parseDouble(k2);
-        konstanta3 = Double.parseDouble(k3);
+            // masukkan nilai konstanta ke dalam variabel
+            konstanta1 = Double.parseDouble(k1);
+            konstanta2 = Double.parseDouble(k2);
+            konstanta3 = Double.parseDouble(k3);
 
-        // ===============
-        // +==LANGKAH 2==+
-        // ===============
+            // ===============
+            // +==LANGKAH 2==+
+            // ===============
 
-        // masukkan nilai-nilai koefisien ke dalam array (anggap sebagai matriks)
-        // sehingga membentuk matriks berikut
-        baris1 = new double[] {finala11, finala12, finala13, 1, 0, 0};
-        baris2 = new double[] {finala21, finala22, finala23, 0, 1, 0};
-        baris3 = new double[] {finala31, finala32, finala33, 0, 0, 1};
+            // masukkan nilai-nilai koefisien ke dalam array (anggap sebagai matriks)
+            // sehingga membentuk matriks berikut
+            baris1 = new double[] {finala11, finala12, finala13, 1, 0, 0};
+            baris2 = new double[] {finala21, finala22, finala23, 0, 1, 0};
+            baris3 = new double[] {finala31, finala32, finala33, 0, 0, 1};
 
-        // melakukan OBE untuk menyelesaikan persamaan
+            // melakukan OBE untuk menyelesaikan persamaan
+
+            // mengubah baris 1 kolom 1 menjadi bilangan 1
+            if (baris1[0] != 1) {
+                if (baris2[0] == 1) {
+                    double temp = baris1[0];
+                    baris1[0] = baris2[0];
+                    baris2[0] = temp;
+                } else if (baris3[0] == 1) {
+                    double temp = baris1[0];
+                    baris1[0] = baris3[0];
+                    baris3[0] = temp;
+                } else {
+                    baris1[0] = baris1[0]/baris1[0];
+                }
+//                String tes = String.valueOf(baris1[0]);
+//                jawabanx.setText(tes);
+            }
+
+            // mengubah baris 2 kolom 1 dan baris 3 kolom 1 menjadi bilangan 0
+            if (baris2[0] != 0) {
+
+            }
+
+        } catch (Exception e) {
+
+        }
     }
 }
