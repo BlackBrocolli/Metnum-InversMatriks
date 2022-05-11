@@ -1,18 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/judul"
+        android:textSize="28sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:paddingStart="20sp"
+        android:paddingEnd="20sp"
+        android:fontFamily="sans-serif-condensed-light"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/kelompok"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textStyle="bold"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_marginLeft="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1."
+            android:textAlignment="center"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textStyle="bold"
+            />
+        <EditText
+            android:layout_width="40sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/satux"
+            android:layout_marginLeft="15sp">
+
+        </EditText>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/x"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/plus"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:layout_marginLeft="8sp"
+            android:layout_marginRight="8sp"
+            android:textSize="17sp"
+            />
+
+        <EditText
+            android:id="@+id/satuy"
+            android:layout_width="40sp"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/y"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/plus"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:layout_marginLeft="8sp"
+            android:layout_marginRight="8sp"
+            android:textSize="17sp"
+            />
+        <EditText
+            android:layout_width="40sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/satuz"
+            >
+
+        </EditText>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/z"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jumlah"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:layout_marginLeft="8sp"
+            android:layout_marginRight="8sp"
+            android:textSize="17sp"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>
