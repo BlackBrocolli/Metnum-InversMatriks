@@ -102,18 +102,98 @@ public class MainActivity extends AppCompatActivity {
                         baris1[i] = baris1[i]/temp;
                     }
                 }
-                String tes = String.valueOf(baris1[0]);
-                String tes2 = String.valueOf(baris1[1]);
-                String tes3 = String.valueOf(baris1[2]);
-                jawabanx.setText(tes);
-                jawabany.setText(tes2);
-                jawabanz.setText(tes3);
             }
 
             // mengubah baris 2 kolom 1 dan baris 3 kolom 1 menjadi bilangan 0
             if (baris2[0] != 0) {
-//                baris2[0] =
+                double temp = baris2[0] * -1;
+                for (int i=0; i<baris2.length; i++)
+                {
+                    baris2[i] = temp*baris1[i] + baris2[i];
+                }
             }
+
+            if (baris3[0] != 0) {
+                double temp = baris3[0] * -1;
+                for (int i=0; i<baris3.length; i++)
+                {
+                    baris3[i] = temp*baris1[i] + baris3[i];
+                }
+            }
+
+            // mengubah baris 2 kolom 2 menjadi bilangan 1
+            if (baris2[1] != 1) {
+
+                double temp = baris2[1];
+                for (int i=0; i<baris2.length; i++)
+                {
+                    baris2[i] = baris2[i]/temp;
+                }
+            }
+
+            // mengubah 2 baris lainnya pada kolom 2 menjadi bilangan 0
+            if (baris1[1] != 0) {
+                double temp = baris1[1] * -1;
+                for (int i=0; i<baris1.length; i++)
+                {
+                    baris1[i] = temp*baris2[i] + baris1[i];
+                }
+            }
+
+            if (baris3[1] != 0) {
+                double temp = baris3[1] * -1;
+                for (int i=0; i<baris3.length; i++)
+                {
+                    baris3[i] = temp*baris2[i] + baris3[i];
+                }
+            }
+
+            // mengubah baris 3 kolom 3 menjadi bilangan 1
+            if (baris3[2] != 1) {
+
+                double temp = baris3[2];
+                for (int i=0; i<baris3.length; i++)
+                {
+                    baris3[i] = baris3[i]/temp;
+                }
+            }
+
+            // mengubah 2 baris lainnya pada kolom 3 menjadi bilangan 0
+            if (baris1[2] != 0) {
+                double temp = baris1[2] * -1;
+                for (int i=0; i<baris1.length; i++)
+                {
+                    baris1[i] = temp*baris3[i] + baris1[i];
+                }
+            }
+
+            if (baris2[2] != 0) {
+                double temp = baris2[2] * -1;
+                for (int i=0; i<baris2.length; i++)
+                {
+                    baris2[i] = temp*baris3[i] + baris2[i];
+                }
+            }
+
+            // ===============
+            // +==LANGKAH 3==+
+            // ===============
+
+            // langkah 3 ini sama dengan langkah 4 pada contoh soal
+
+            // melakukan perkalian hasil matriks tadi dengan konstanta
+            double x = (baris1[3]*konstanta1)+(baris1[4]*konstanta2)+(baris1[5]*konstanta3);
+            double y = (baris2[3]*konstanta1)+(baris2[4]*konstanta2)+(baris2[5]*konstanta3);
+            double z = (baris3[3]*konstanta1)+(baris3[4]*konstanta2)+(baris3[5]*konstanta3);
+
+            //                debugging saja
+            String tes = String.valueOf(x);
+            String tes2 = String.valueOf(y);
+            String tes3 = String.valueOf(z);
+            jawabanx.setText(tes);
+            jawabany.setText(tes2);
+            jawabanz.setText(tes3);
+
 
         } catch (Exception e) {
 
