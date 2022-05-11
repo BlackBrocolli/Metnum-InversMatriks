@@ -88,23 +88,31 @@ public class MainActivity extends AppCompatActivity {
             // mengubah baris 1 kolom 1 menjadi bilangan 1
             if (baris1[0] != 1) {
                 if (baris2[0] == 1) {
-                    double temp = baris1[0];
-                    baris1[0] = baris2[0];
-                    baris2[0] = temp;
+                    double[] temp = baris1;
+                    baris1 = baris2;
+                    baris2 = temp;
                 } else if (baris3[0] == 1) {
-                    double temp = baris1[0];
-                    baris1[0] = baris3[0];
-                    baris3[0] = temp;
+                    double[] temp = baris1;
+                    baris1 = baris3;
+                    baris3 = temp;
                 } else {
-                    baris1[0] = baris1[0]/baris1[0];
+                    double temp = baris1[0];
+                    for (int i=0; i<baris1.length; i++)
+                    {
+                        baris1[i] = baris1[i]/temp;
+                    }
                 }
-//                String tes = String.valueOf(baris1[0]);
-//                jawabanx.setText(tes);
+                String tes = String.valueOf(baris1[0]);
+                String tes2 = String.valueOf(baris1[1]);
+                String tes3 = String.valueOf(baris1[2]);
+                jawabanx.setText(tes);
+                jawabany.setText(tes2);
+                jawabanz.setText(tes3);
             }
 
             // mengubah baris 2 kolom 1 dan baris 3 kolom 1 menjadi bilangan 0
             if (baris2[0] != 0) {
-
+//                baris2[0] =
             }
 
         } catch (Exception e) {
