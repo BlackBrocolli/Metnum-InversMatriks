@@ -2,10 +2,13 @@ package com.kelompok2.inversmatriks;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -186,17 +189,28 @@ public class MainActivity extends AppCompatActivity {
             double y = (baris2[3]*konstanta1)+(baris2[4]*konstanta2)+(baris2[5]*konstanta3);
             double z = (baris3[3]*konstanta1)+(baris3[4]*konstanta2)+(baris3[5]*konstanta3);
 
-            //                debugging saja
-            String tes = String.valueOf(x);
-            String tes2 = String.valueOf(y);
-            String tes3 = String.valueOf(z);
-            jawabanx.setText(tes);
-            jawabany.setText(tes2);
-            jawabanz.setText(tes3);
+            // tampilkan output hasil
+            DecimalFormat df = new DecimalFormat("#.##");
 
+            String hasil1 = String.valueOf(df.format(x));
+            String hasil2 = String.valueOf(df.format(y));
+            String hasil3 = String.valueOf(df.format(z));
+            jawabanx.setText(hasil1);
+            jawabany.setText(hasil2);
+            jawabanz.setText(hasil3);
 
         } catch (Exception e) {
-
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage("Silahkan mengisi seluruh isian dengan benar!")
+                    .setTitle("Alert!")
+                    .setCancelable(false)
+                    .setNeutralButton("Ok", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            // do something
+                            dialogInterface.cancel();
+                        }
+                    }).show();
         }
     }
 }
