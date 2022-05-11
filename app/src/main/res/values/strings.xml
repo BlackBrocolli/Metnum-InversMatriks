@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">inversmatriks</string>
+    <string name="judul">Inverse Matrix Application</string>
+    <string name="kelompok">Kelompok 2</string>
+    <string name="x">x</string>
+    <string name="y">y</string>
+    <string name="z">z</string>
+    <string name="plus">+</string>
+    <string name="jumlah">=</string>
+</resources>

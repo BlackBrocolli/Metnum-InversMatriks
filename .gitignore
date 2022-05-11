@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+=======
 
 # Created by https://www.toptal.com/developers/gitignore/api/android,androidstudio,java,windows
 # Edit at https://www.toptal.com/developers/gitignore?templates=android,androidstudio,java,windows
@@ -212,3 +229,4 @@ fabric.properties
 !/gradle/wrapper/gradle-wrapper.jar
 
 # End of https://www.toptal.com/developers/gitignore/api/android,androidstudio,java,windows
+>>>>>>> cfa077cb2461cba3033d00f6c717c8e5774df481
