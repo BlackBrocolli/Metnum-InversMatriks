@@ -337,7 +337,7 @@
         android:fontFamily="sans-serif-condensed-light"
         android:textStyle="bold"
         android:layout_marginStart="25sp"
-        android:textSize="18sp"
+        android:textSize="20sp"
         />
     <LinearLayout
         android:layout_width="fill_parent"
