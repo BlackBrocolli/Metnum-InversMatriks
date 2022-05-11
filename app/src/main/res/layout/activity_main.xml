@@ -43,7 +43,8 @@
             android:layout_width="40sp"
             android:layout_height="wrap_content"
             android:id="@+id/satux"
-            android:layout_marginLeft="15sp">
+            android:layout_marginLeft="15sp"
+            android:inputType="number">
 
         </EditText>
 
