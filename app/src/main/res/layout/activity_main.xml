@@ -41,7 +41,7 @@
             />
         <EditText
             android:layout_width="40sp"
-            android:layout_height="wrap_content"
+            android:layout_height="40sp"
             android:id="@+id/satux"
             android:layout_marginLeft="15sp"
             android:inputType="numberDecimal|numberSigned">
@@ -71,7 +71,8 @@
         <EditText
             android:id="@+id/satuy"
             android:layout_width="40sp"
-            android:layout_height="wrap_content"
+            android:layout_height="40sp"
+            android:inputType="number"
             />
 
         <TextView
@@ -94,7 +95,8 @@
             />
         <EditText
             android:layout_width="40sp"
-            android:layout_height="wrap_content"
+            android:layout_height="40sp"
+            android:inputType="number"
             android:id="@+id/satuz"
             >
 
@@ -119,8 +121,9 @@
             />
         <EditText
             android:layout_width="40sp"
-            android:layout_height="wrap_content"
             android:id="@+id/hasilsatu"
+            android:layout_height="40sp"
+            android:inputType="number"
             >
         </EditText>
 
@@ -141,7 +144,8 @@
             />
         <EditText
             android:layout_width="40sp"
-            android:layout_height="wrap_content"
+            android:layout_height="40sp"
+            android:inputType="number"
             android:id="@+id/duax"
             android:layout_marginLeft="15sp">
 
@@ -170,7 +174,8 @@
         <EditText
             android:id="@+id/duay"
             android:layout_width="40sp"
-            android:layout_height="wrap_content"
+            android:layout_height="40sp"
+            android:inputType="number"
             />
 
         <TextView
@@ -193,7 +198,8 @@
             />
         <EditText
             android:layout_width="40sp"
-            android:layout_height="wrap_content"
+            android:layout_height="40sp"
+            android:inputType="number"
             android:id="@+id/duaz"
             >
 
@@ -218,7 +224,8 @@
             />
         <EditText
             android:layout_width="40sp"
-            android:layout_height="wrap_content"
+            android:layout_height="40sp"
+            android:inputType="number"
             android:id="@+id/hasildua"
             >
         </EditText>
@@ -240,7 +247,8 @@
             />
         <EditText
             android:layout_width="40sp"
-            android:layout_height="wrap_content"
+            android:layout_height="40sp"
+            android:inputType="number"
             android:id="@+id/tigax"
             android:layout_marginLeft="15sp">
 
@@ -269,7 +277,8 @@
         <EditText
             android:id="@+id/tigay"
             android:layout_width="40sp"
-            android:layout_height="wrap_content"
+            android:layout_height="40sp"
+            android:inputType="number"
             />
 
         <TextView
@@ -292,7 +301,8 @@
             />
         <EditText
             android:layout_width="40sp"
-            android:layout_height="wrap_content"
+            android:layout_height="40sp"
+            android:inputType="number"
             android:id="@+id/tigaz"
             >
 
@@ -317,7 +327,8 @@
             />
         <EditText
             android:layout_width="40sp"
-            android:layout_height="wrap_content"
+            android:layout_height="40sp"
+            android:inputType="number"
             android:id="@+id/hasiltiga"
             >
         </EditText>
