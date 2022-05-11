@@ -7,4 +7,6 @@
     <string name="z">z</string>
     <string name="plus">+</string>
     <string name="jumlah">=</string>
+    <string name="hitung">HITUNG</string>
+    <string name="hasil">Hasilnya :</string>
 </resources>
