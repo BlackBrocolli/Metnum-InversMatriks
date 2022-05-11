@@ -330,7 +330,8 @@
         android:layout_height="wrap_content"
         android:text="@string/hitung"
         android:layout_marginStart="100sp"
-        android:layout_marginEnd="100sp"/>
+        android:layout_marginEnd="100sp"
+        android:onClick="hitung"/>
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

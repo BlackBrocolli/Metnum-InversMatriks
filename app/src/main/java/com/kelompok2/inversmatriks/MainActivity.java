@@ -3,6 +3,7 @@ package com.kelompok2.inversmatriks;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -32,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
         hasil2 = (EditText) findViewById(R.id.hasildua);
         hasil3 = (EditText) findViewById(R.id.hasiltiga);
 
+
+    }
+
+    private void hitung(View view) {
         // ambil nilai dari editText
         String a11 = satux.getText().toString();
         String a12 = satuy.getText().toString();
